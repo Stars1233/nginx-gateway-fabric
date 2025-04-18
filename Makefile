@@ -23,7 +23,7 @@ GO_LINKER_FLAGS = $(GO_LINKER_FLAGS_OPTIMIZATIONS) $(GO_LINKER_FlAGS_VARS)
 
 # tools versions
 # renovate: datasource=github-tags depName=golangci/golangci-lint
-GOLANGCI_LINT_VERSION = v1.64.8
+GOLANGCI_LINT_VERSION = v2.1.2
 # renovate: datasource=docker depName=kindest/node
 KIND_K8S_VERSION = v1.32.3
 # renovate: datasource=github-tags depName=norwoodj/helm-docs
@@ -31,7 +31,7 @@ HELM_DOCS_VERSION = v1.14.2
 # renovate: datasource=github-tags depName=ahmetb/gen-crd-api-reference-docs
 GEN_CRD_API_REFERENCE_DOCS_VERSION = v0.3.0
 # renovate: datasource=go depName=sigs.k8s.io/controller-tools
-CONTROLLER_TOOLS_VERSION = v0.17.2
+CONTROLLER_TOOLS_VERSION = v0.17.3
 # renovate: datasource=docker depName=node
 NODE_VERSION = 22
 # renovate: datasource=docker depName=quay.io/helmpack/chart-testing
@@ -192,7 +192,7 @@ vet: ## Run go vet against code
 
 .PHONY: lint
 lint: ## Run golangci-lint against code
-	go run github.com/golangci/golangci-lint/cmd/golangci-lint@$(GOLANGCI_LINT_VERSION) run --fix
+	go run github.com/golangci/golangci-lint/v2/cmd/golangci-lint@$(GOLANGCI_LINT_VERSION) run --fix
 
 .PHONY: unit-test
 unit-test: ## Run unit tests for the go code

@@ -94,12 +94,12 @@ jobs:
         run: make unit-test
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@0565863a31f2c772f9f0395002a31e3f06189574 # v5.4.0
+        uses: codecov/codecov-action@ad3126e916f78f00edff4ed0317cf185271ccc2d # v5.4.2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: cover-${{ github.run_id }}.html
           path: ${{ github.workspace }}/cover.html
@@ -114,7 +114,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Setup Node.js Environment
-        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version-file: .nvmrc
 
@@ -122,7 +122,7 @@ jobs:
         run: npm --prefix ${{ github.workspace }}/internal/mode/static/nginx/modules install-ci-test
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@0565863a31f2c772f9f0395002a31e3f06189574 # v5.4.0
+        uses: codecov/codecov-action@ad3126e916f78f00edff4ed0317cf185271ccc2d # v5.4.2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -149,7 +149,7 @@ jobs:
             .github/.cache/buster-for-binary
 
       - name: Create/Update Draft
-        uses: lucacome/draft-release@9e620cf75275b925cc44df78f13f4061f3190693 # v1.2.1
+        uses: lucacome/draft-release@f15262dc3ac8c3efbf09a8ce5406cd0fc47aabb1 # v1.2.2
         with:
           minor-label: "enhancement"
           major-label: "change"
@@ -169,9 +169,9 @@ jobs:
         if: github.ref_type == 'tag'
 
       - name: Build binary
-        uses: goreleaser/goreleaser-action@90a3faa9d0182683851fbfa97ca1a2cb983bfca3 # v6.2.1
+        uses: goreleaser/goreleaser-action@9c156ee8a17a598857849441385a2041ef570552 # v6.3.0
         with:
-          version: v2.8.1 # renovate: datasource=github-tags depName=goreleaser/goreleaser
+          version: v2.8.2 # renovate: datasource=github-tags depName=goreleaser/goreleaser
           args: ${{ github.ref_type == 'tag' && 'release' || 'build --snapshot' }} --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

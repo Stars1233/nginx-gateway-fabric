@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/nginx/nginx-gateway-fabric)](https://goreportcard.com/report/github.com/nginx/nginx-gateway-fabric)
 [![codecov](https://codecov.io/gh/nginx/nginx-gateway-fabric/graph/badge.svg?token=32ULC8F13Z)](https://codecov.io/gh/nginx/nginx-gateway-fabric)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/nginx/nginx-gateway-fabric?logo=github&sort=semver)](https://github.com/nginx/nginx-gateway-fabric/releases/latest)
-[![Slack](https://img.shields.io/badge/slack-%23nginx--gateway--fabric-green?logo=slack)](https://nginxcommunity.slack.com/channels/nginx-gateway-fabric)
+[![Forum](https://img.shields.io/badge/nginx--community--forum-green)](https://community.nginx.org/)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 # NGINX Gateway Fabric
@@ -66,7 +66,7 @@ The following table lists the software versions NGINX Gateway Fabric supports.
 
 | NGINX Gateway Fabric | Gateway API | Kubernetes | NGINX OSS | NGINX Plus |
 |----------------------|-------------|------------|-----------|------------|
-| Edge                 | 1.2.1       | 1.25+      | 1.27.4    | R33        |
+| Edge                 | 1.2.1       | 1.25+      | 1.27.5    | R34        |
 | 1.6.2                | 1.2.1       | 1.25+      | 1.27.4    | R33        |
 | 1.6.1                | 1.2.1       | 1.25+      | 1.27.4    | R33        |
 | 1.6.0                | 1.2.1       | 1.25+      | 1.27.3    | R33        |

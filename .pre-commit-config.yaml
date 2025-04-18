@@ -27,7 +27,7 @@ repos:
         exclude: (^examples/|^docs/|.*_test.go$)
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: v8.24.3
     hooks:
       - id: gitleaks
 
@@ -39,7 +39,7 @@ repos:
           - javascript
 
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.64.8
+    rev: v2.1.2
     hooks:
       - id: golangci-lint-full
         name: golangci-lint-root
@@ -60,7 +60,7 @@ repos:
   # Rules are in .yamllint.yaml file
   # See https://yamllint.readthedocs.io/en/stable/rules.html# for rule descriptions
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.36.2
+    rev: v1.37.0
     hooks:
       - id: yamllint
 
@@ -80,7 +80,7 @@ repos:
           - --template-files=README.md.gotmpl
 
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.10.0-2
+    rev: v3.11.0-1
     hooks:
       - id: shfmt-src
         args: [-w, -s, -i, "4"]
